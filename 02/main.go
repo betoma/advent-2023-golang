@@ -7,8 +7,6 @@ import (
 	"os"
 	"strconv"
 	"strings"
-
-	"golang.org/x/exp/maps"
 )
 
 func cubeCount(filename string) (total int, power int) {
@@ -63,7 +61,7 @@ func cubeCount(filename string) (total int, power int) {
 				total += game_no
 			}
 			p := 1
-			for _, n := range maps.Values(min_cubes) {
+			for _, n := range min_cubes {
 				p *= n
 			}
 			power += p
